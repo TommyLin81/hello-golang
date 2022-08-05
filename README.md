@@ -18,7 +18,7 @@ use MIT license
 
 <img src="./picture/setting_repository_confi.png" width="70%"/>
 
-### clone to local project
+### clone project to local
 
 ```shell
 $ cd ~/workspace
