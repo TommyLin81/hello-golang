@@ -82,5 +82,18 @@ $ git tag v0.1.0
 
 $ git push
 
-$ git push origin v0.1.0
+$ git push --tags
 ```
+
+### publishing module
+
+```shell
+$ GOPROXY=proxy.golang.org go list -m github.com/TommyLin81/hello-golang@v0.1.0
+github.com/TommyLin81/hello-golang v0.1.0
+```
+
+After a moment, you can find published module in https://pkg.go.dev/github.com/TommyLin81/hello-golang
+
+## Reference
+
+* [Golang Document - Publishing a module](https://go.dev/doc/modules/publishing)
