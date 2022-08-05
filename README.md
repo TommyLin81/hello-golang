@@ -1,8 +1,5 @@
 # Hello-golang
 
-## Overview
-[TOC]
-
 ## Description
 
 Practice to publish this golang module
