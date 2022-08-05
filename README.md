@@ -66,6 +66,14 @@ func TestHello(t *testing.T) {
 }
 ```
 
+run golang unit test
+
+```shell
+$ go test
+PASS
+ok      github.com/TommyLin81/hello-golang      0.319s
+```
+
 ### push module and setting release version
 
 ```shell
@@ -73,5 +81,7 @@ $ git add .
 
 $ git commit -m 'feat: add Hello function'
 
-$ 
+$ git tag v0.1.0
+
+$ git push origin v0.1.0
 ```
