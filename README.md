@@ -1,4 +1,4 @@
-# Cashier
+# Hello-golang
 
 ## Overview
 [TOC]
@@ -82,6 +82,8 @@ $ git add .
 $ git commit -m 'feat: add Hello function'
 
 $ git tag v0.1.0
+
+$ git push
 
 $ git push origin v0.1.0
 ```
