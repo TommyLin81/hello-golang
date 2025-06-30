@@ -1,24 +1,26 @@
 # Hello-golang
 
+> A simple example showing how to create and publish a public Go module.
+>
+> 📖 Original blog post (中文): [Publish Golang Module](https://blog.tommylin.tech/post/golang/publish-golang-module/)
+
 ## Description
 
-Practice to publish this golang module
+This repository provides a step-by-step guide to publishing a Go module.
 
-## Publishing steps
+## Publishing Steps
 
-### go to [github](https://github.com/new) and create new repository
+### 1. Create a new GitHub repository
 
 <img src="./picture/create_github_repository.png" width="70%"/>
 
-### setting repository config
+### 2. Configure repository settings
 
-repository link = https://github.com/TommyLin81/hello-golang
-
-use MIT license
+Choose the MIT license.
 
 <img src="./picture/setting_repository_confi.png" width="70%"/>
 
-### clone project to local
+### 3. Clone project to local
 
 ```shell
 $ cd ~/workspace
@@ -28,7 +30,7 @@ $ git clone https://github.com/TommyLin81/hello-golang.git
 $ cd hello-golang
 ```
 
-### create golang module
+### 4. Initialize Go module
 
 ```shell
 $ go mod init github.com/TommyLin81/hello-golang
@@ -39,7 +41,7 @@ $ touch hellogolang.go
 $ touch hellogolang_test.go
 ```
 
-in `~/workspace/hello-golang/hellogolang.go`
+In `~/workspace/hello-golang/hellogolang.go`
 
 ```golang
 package hellogolang
@@ -48,7 +50,8 @@ func Hello() string {
     return "hello golang !"
 }
 ```
-in `~/workspace/hello-golang/hellogolang_test.go`
+
+In `~/workspace/hello-golang/hellogolang_test.go`
 
 ```golang
 package hellogolang
@@ -63,7 +66,7 @@ func TestHello(t *testing.T) {
 }
 ```
 
-run golang unit test
+Run unit tests
 
 ```shell
 $ go test
@@ -71,7 +74,7 @@ PASS
 ok      github.com/TommyLin81/hello-golang      0.319s
 ```
 
-### push module and setting release version
+### 5. Commit and tag a version
 
 ```shell
 $ git add .
@@ -85,15 +88,15 @@ $ git push
 $ git push --tags
 ```
 
-### publishing module
+### 6. Publish module
 
 ```shell
 $ GOPROXY=proxy.golang.org go list -m github.com/TommyLin81/hello-golang@v0.1.0
 github.com/TommyLin81/hello-golang v0.1.0
 ```
 
-After a moment, you can find published module in https://pkg.go.dev/github.com/TommyLin81/hello-golang
+After a short while, your published module will be available at: https://pkg.go.dev/github.com/TommyLin81/hello-golang
 
-## Reference
+## References
 
-* [Golang Document - Publishing a module](https://go.dev/doc/modules/publishing)
+- [Golang Document - Publishing a module](https://go.dev/doc/modules/publishing)
